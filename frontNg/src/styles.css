@@ -1,3 +1,5 @@
 body {
-  background-color: rgb(12, 6, 122);
+  background-image: url(/assets/campo.webp);
+  
+  font-family: 'Lucida Sans Unicode', sans-serif
 }

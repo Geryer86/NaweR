@@ -1,3 +1,30 @@
 .home {
-  background-color: white;
+  background-color: rgb(198, 233, 238);
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(10px, 1fr)); */
+  justify-content: space-between;
+}
+
+.homemap {
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 1%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+}
+
+.home2 {
+  border-style: solid;
+  border-width: 1px;
+  padding-left: 1%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+}
+
+.btt {
+  display: flex;
+  border-style: solid;
+  border-width: 1px;
+  padding: 2%;
+  padding-top: 20%;
 }

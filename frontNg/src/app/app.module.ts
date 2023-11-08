@@ -7,6 +7,9 @@ import { MapComponent } from './components/map/map.component';
 import { AgrapComponent } from './components/agrap/agrap.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { HomeComponent } from './pages/home/home.component';
+import { FieldsttComponent } from './components/fieldstt/fieldstt.component';
+import { CroprottComponent } from './components/croprott/croprott.component';
+import { RecomendationComponent } from './pages/recomendation/recomendation.component';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import { HomeComponent } from './pages/home/home.component';
     MapComponent,
     AgrapComponent,
     LandingComponent,
-    HomeComponent
+    HomeComponent,
+    FieldsttComponent,
+    CroprottComponent,
+    RecomendationComponent
   ],
   imports: [
     BrowserModule,
