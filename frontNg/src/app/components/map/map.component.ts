@@ -17,9 +17,6 @@ import { Component } from '@angular/core';
 
 
 export class MapComponent {
-  
-  title = 'Google Maps';
-  
   options = {
     mapTypeId: "satellite",
     streetViewControl: false,

@@ -2,7 +2,7 @@ const { Sequelize, DataTypes } = require("sequelize");
 require("dotenv").config();
 
 const UsersModel = require("./models/UsersModel");
-const PostsModel = require("./models/PostsModel");
+const FarmsModel = require("./models/FarmsModel");
 
 const { DB_USER, DB_PASSWORD, DB_NAME, DB_HOST } = process.env;
 
@@ -14,12 +14,13 @@ const sequelize = new Sequelize(
 );
 
 UsersModel(sequelize);
-PostsModel(sequelize);
+FarmsModel(sequelize);
 
-const { User, Post } = sequelize.models;
+const { User, Farm } = sequelize.models;
 
-User.hasMany(Post);
-Post.belongsTo(User);
+User.hasMany(Farm);
+Farm.belongsTo(User);
+
 
 module.exports = {
   ...sequelize.models,

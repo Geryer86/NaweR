@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./croprott.component.css']
 })
 export class CroprottComponent {
-  title = "Rotación"
+  crops = [
+    'Cultivo',
+    'Soja 1°',
+    'Soja 2°',
+    'Trigo largo',
+    'Trigo corto',
+    'Girasol',
+    'Maíz 1°',
+    'Maíz 2°',
+    'Gramíneas',
+    'Leguminosas',
+    'Barbecho',
+    'Ganadería'
+  ]
 }

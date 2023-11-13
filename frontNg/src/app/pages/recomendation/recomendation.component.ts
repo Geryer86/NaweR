@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recomendation.component.css']
 })
 export class RecomendationComponent {
-  analizando: boolean = true
+  loading: boolean = true
   vende: boolean = false
   ngOnInit(): void {
     setTimeout(() => {
-      this.analizando = false;
+      this.loading = false;
       this.vende = true;
     }, 3000);
   }
