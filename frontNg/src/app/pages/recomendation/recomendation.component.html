@@ -1,9 +1,7 @@
 <div class="rec">
+  <h2 class="an" *ngIf="loading">Creando recomendación..</h2>
+  <h1 class="ven" *ngIf="vende">
+    VENDÉ EL CAMPO!!!
+    <button routerLink="/home">Volver</button>
+  </h1>
 </div>
-<h2 class="an" *ngIf="loading">Creando recomendación..</h2>
-<h1 class="ven" *ngIf="vende">
-  VENDÉ EL CAMPO!!!
-  <a routerLink="/home">
-    <button>Volver</button>
-  </a>
-</h1>

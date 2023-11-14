@@ -12,6 +12,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { FieldsttComponent } from './components/fieldstt/fieldstt.component';
 import { CroprottComponent } from './components/croprott/croprott.component';
 import { RecomendationComponent } from './pages/recomendation/recomendation.component';
+import { UsersComponent } from './components/users/users.component';
+import { FarmsComponent } from './components/farms/farms.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { RecomendationComponent } from './pages/recomendation/recomendation.comp
     HomeComponent,
     FieldsttComponent,
     CroprottComponent,
-    RecomendationComponent
+    RecomendationComponent,
+    UsersComponent,
+    FarmsComponent,
+    HeaderComponent
   ],
   imports: [
     FormsModule,

@@ -1,4 +1,5 @@
 .home {
+  margin-top: 100px;
   background-color: rgb(198, 233, 238);
   display: flex;
   /* grid-template-columns: repeat(auto-fit, minmax(10px, 1fr)); */

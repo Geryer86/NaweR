@@ -1,0 +1,11 @@
+.cards {
+  margin-top: 100px;
+  display: flex;
+  grid-column-gap: 5px;
+}
+
+.for {
+  border: solid;
+  border-radius: 2%;
+  border-width: 2px;
+}

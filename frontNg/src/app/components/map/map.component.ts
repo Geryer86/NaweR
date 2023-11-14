@@ -31,7 +31,7 @@ export class MapComponent {
     lng: -60.149028935272156
   }
   position = this.bsAs
-  zoom = 8
+  zoom = 6
 }
 
 // polygonPoints = polySample;

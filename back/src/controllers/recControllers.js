@@ -1,8 +1,10 @@
 const axios = require('axios'); // Asegúrate de tener instalada esta biblioteca
+require("dotenv").config();
+const { OPENIA_KEY } = process.env
+
 
 // urls 'https://api.openai.com/v1/engines/davinci-codex/completions' 'https://api.openai.com/v1/engines/gpt-3.5-turbo/completions'
 const pregunta = "¿Cómo puedo enviar preguntas desde mi aplicación?";
-const apiKey = "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";
 
 const getAnswerFromAPI = async () => {
   await axios.post('https://api.openai.com/v1/completions', {
@@ -12,7 +14,7 @@ const getAnswerFromAPI = async () => {
   }, {
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${apiKey}`,
+      'Authorization': `Bearer ${OPENIA_KEY}`,
     },
   })
   .then(res => {
