@@ -1,0 +1,103 @@
+<div class="create">
+  <div class="fldstt">
+    <form (ngSubmit)="onSubmit()" #farmForm="ngForm">
+      <h2>Establecimiento</h2>
+      <p>
+        Nombre
+        <input type="text" [(ngModel)]="farm.name" name="name" required/>
+      </p>
+      <p>
+        Ubicación
+        <input type="text" [(ngModel)]="farm.ubication" name="ubication" required/>
+      </p>
+      <p>
+        Superficie
+        <input type="number" [(ngModel)]="farm.area" name="area" required/>
+      </p>
+      <h2>Estado del campo</h2>
+      <p>Enmalezamiento (%)</p>
+      <select [(ngModel)]="farm.weeding" name="weeding" required>
+        <option *ngFor="let weeds of weeding" [value]="weeds">{{weeds}}</option>
+      </select>
+      <p>Compactación</p>
+      <select [(ngModel)]="farm.compactation" name="compactation" required>
+        <option *ngFor="let lvl of lvls" [value]="lvl">{{lvl}}</option>
+      </select>
+      <p>Erosión</p>
+      <select [(ngModel)]="farm.erosion" name="erosion" required>
+        <option *ngFor="let lvl of lvls" [value]="lvl">{{lvl}}</option>
+      </select>
+    </form>
+    </div>
+  <div class="aptagr">
+    <form (ngSubmit)="onSubmit()" #farmForm="ngForm">
+      <h2>Aptitud agrícola</h2>
+      <p>Clase (I-VIII)</p>
+      <select [(ngModel)]="farm.class_" name="class_" required>
+        <option *ngFor="let class_ of classes" [value]="class_">{{class_}}</option>
+      </select>
+      <p>Pendiente (%)</p>
+      <select [(ngModel)]="farm.slope" name="slope" required>
+        <option *ngFor="let slp of slope" [value]="slp">{{slp}}</option>
+      </select>
+      <p>Precipitaciones (última campaña)</p>
+      <input type="number" placeholder="milímetros" [(ngModel)]="farm.rainfall" name="rainfall" required/>
+      <p>Precipitaciones esperadas</p>
+      <input type="number" placeholder="milímetros" [(ngModel)]="farm.rainfallb" name="rainfallb" required/>
+    </form>
+    </div>
+  <div class="rtt">
+    <h2>Rotación</h2>
+    <h4>Desde el último año</h4>
+    <div class="crops">
+      <label>1</label>
+      <br>
+      <select>
+        <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
+      </select>
+      <select>
+        <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
+      </select>
+      <br>
+      <label>2</label>
+      <br>
+      <select>
+        <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
+      </select>
+      <select>
+        <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
+      </select>
+      <br>
+      <label>3</label>
+      <br>
+      <select>
+        <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
+      </select>
+      <select>
+        <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
+      </select>
+      <br>
+      <label>4</label>
+      <br>
+      <select>
+        <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
+      </select>
+      <select>
+        <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
+      </select>
+      <br>
+      <label>5</label>
+      <br>
+      <select>
+        <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
+      </select>
+      <select>
+        <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
+      </select> 
+    </div>
+  </div>
+  <div class="btt">
+    <button class="button button-blue" type="submit" (click)="onSubmit()" [disabled]="!farmForm.form.valid">Cargar establecimiento</button>
+    <button class="button button-blue" routerLink="/farms">Ver establecimientos</button>
+  </div>
+</div>

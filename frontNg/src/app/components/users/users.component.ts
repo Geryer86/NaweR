@@ -12,15 +12,25 @@ export class UsersComponent implements OnInit {
   
   usersList = new Array<Users>();
 
-  constructor(private service: UsersService) { }
+  user = { 
+    name: '',
+    username: '',
+    email: ''
+  };
+
+  constructor(private http: UsersService) { }
 
   ngOnInit(): void {
-    this.service.GetUsers().subscribe(data => {
+    this.http.GetUsers().subscribe(data => {
       for (let i = 0; i < data.length; i++) {
         this.usersList.push(data[i])
       }
-      console.log(this.usersList)
     })
+  }
+
+  onSubmit(): void {
+    this.http.CreateUsers(this.user).subscribe()
+    window.location.reload()
   }
 
 }

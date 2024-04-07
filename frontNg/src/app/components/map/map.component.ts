@@ -1,13 +1,5 @@
 import { Component } from '@angular/core';
 
-// const polySample = [
-//   { "lat": -34.5, "lng": -58.4 },
-//   { lat: -34.5, lng: -59.4 },
-//   { lat: -35.5, lng: -59.4 },
-//   { lat: -35.5, lng: -58.4 }
-// ]
-
-// const polyPoints = new google.maps.LatLng({lat: 0, lng: 0}).toJSON();
 
 @Component({
   selector: 'app-map',
@@ -17,6 +9,12 @@ import { Component } from '@angular/core';
 
 
 export class MapComponent {
+
+  mainData = {
+    name: '',
+    ubication: '',
+    area: ''
+  }
   options = {
     mapTypeId: "satellite",
     streetViewControl: false,
@@ -33,10 +31,3 @@ export class MapComponent {
   position = this.bsAs
   zoom = 6
 }
-
-// polygonPoints = polySample;
-
-// centerVic() {
-//   this.position = this.vic
-//   this.zoom = 10
-// }

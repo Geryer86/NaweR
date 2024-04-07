@@ -1,7 +1,7 @@
 const { createFarm, getFarmByName, getAllFarms } = require("../controllers/farmControllers");
 
 const createFarmHandler = async (req, res) => {
-  const { name, area, ubication, class_, slope, rainfall, rainfallb, weeding, compactation, erosion, userID } = req.query;
+  const { name, area, ubication, class_, slope, rainfall, rainfallb, weeding, compactation, erosion, userID } = req.body;
   try {
     const response = await createFarm(name, area, ubication, class_, slope, rainfall, rainfallb, weeding, compactation, erosion, userID);
     res.status(200).json(response);

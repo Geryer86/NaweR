@@ -1,10 +1,21 @@
 <div class="cards">
-  <div class="for" *ngFor="let user of usersList">
-    <h5>{{ user.name }}</h5>
-    <h5>{{ user.username }}</h5>
-    <h5>{{ user.email }}</h5>
+  <div class="for" *ngFor="let e of usersList">
+    <h5>{{ e.name }}</h5>
+    <h5>{{ e.username }}</h5>
+    <h5>{{ e.email }}</h5>
   </div>
 </div>
+<div>
+  <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+    <input placeholder="Nombre" type="text" [(ngModel)]="user.name" name="name" required>
+    <br>
+    <input placeholder="Usuario" type="text" [(ngModel)]="user.username" name="username" required>
+    <br>
+    <input placeholder="Email" type="email" [(ngModel)]="user.email" name="email" required>
+    <br>
+  </form>
+</div>
+<button type="submit" (click)="onSubmit()" [disabled]="!userForm.form.valid">Crear Usuario</button>
 <a routerLink="/home">
   <button>Volver</button>
 </a>

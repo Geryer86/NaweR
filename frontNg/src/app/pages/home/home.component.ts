@@ -8,3 +8,16 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
 }
+
+// farm = {
+//   name: '',
+//   area: 0,
+//   ubicaion: '',
+//   class_: '',
+//   slope: '',
+//   rainfall: 0,
+//   rainfallb: 0,
+//   weeding: '',
+//   compactation: '',
+//   erosion: ''
+// }
