@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environment';
+//import { environment } from 'src/environment';
 
 
 @Injectable({
@@ -22,12 +22,14 @@ export class UsersService {
   }
 
   GetUsers(): Observable<any> {
-    return this.http.get(`${environment.hostname}/users`)
+    //return this.service.get(`${environment.hostname}/users`)
+    return this.http.get(`http://localhost:3001/users`)
   }
 
   CreateUsers(e: any): Observable<any> {
     return this.http.post(
-      `${environment.hostname}/users`, e, this.HttpUploadOptions);
-  }
+      //`${environment.hostname}/users`, e, this.HttpUploadOptions);
+      `http://localhost:3001/users`, e, this.HttpUploadOptions);
+    }
 
 }
