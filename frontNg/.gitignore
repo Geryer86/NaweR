@@ -46,3 +46,4 @@ Thumbs.db
 
 # Ignorar el archivo de entorno con la clave de API
 /src/environment.ts
+/src/environment.prod.ts

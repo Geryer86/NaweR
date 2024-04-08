@@ -3,6 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environment';
 
+//http = service ????
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +12,7 @@ import { environment } from 'src/environment';
 
 export class UsersService {
   
-  constructor(private service:HttpClient)
+  constructor(private http:HttpClient)
   //constructor(private http:HttpClient)
   { }
 
@@ -24,16 +26,15 @@ export class UsersService {
   }
 
   GetUsers(): Observable<any> {
-    return this.service.get(`${environment.hostname}/users`)
+    return this.http.get(`${environment.hostname}/users`)
     //return this.http.get(`http://localhost:3001/users`)
   }
 
   CreateUsers(e: any): Observable<any> {
-    return this.service.post
+    return this.http.post
     //return this.http.post
     (
       `${environment.hostname}/users`, e, this.HttpUploadOptions);
       //`http://localhost:3001/users`, e, this.HttpUploadOptions);
     }
-
 }
