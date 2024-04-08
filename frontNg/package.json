@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@ngx-env/builder": "^17.3.0",
     "dotenv": "^16.4.5",
     "ngrx": "^0.0.1-security",
     "redux": "^4.2.1",
