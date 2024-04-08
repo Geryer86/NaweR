@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-//import { environment } from 'src/environment';
+import { environment } from 'src/environment';
 
 
 @Injectable({
@@ -10,7 +10,9 @@ import { Observable } from 'rxjs';
 
 export class UsersService {
   
-  constructor(private http:HttpClient) { }
+  constructor(private service:HttpClient)
+  //constructor(private http:HttpClient)
+  { }
 
   HttpUploadOptions = {
     headers: new HttpHeaders({
@@ -22,14 +24,16 @@ export class UsersService {
   }
 
   GetUsers(): Observable<any> {
-    //return this.service.get(`${environment.hostname}/users`)
-    return this.http.get(`http://localhost:3001/users`)
+    return this.service.get(`${environment.hostname}/users`)
+    //return this.http.get(`http://localhost:3001/users`)
   }
 
   CreateUsers(e: any): Observable<any> {
-    return this.http.post(
-      //`${environment.hostname}/users`, e, this.HttpUploadOptions);
-      `http://localhost:3001/users`, e, this.HttpUploadOptions);
+    return this.service.post
+    //return this.http.post
+    (
+      `${environment.hostname}/users`, e, this.HttpUploadOptions);
+      //`http://localhost:3001/users`, e, this.HttpUploadOptions);
     }
 
 }
