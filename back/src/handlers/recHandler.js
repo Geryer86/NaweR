@@ -1,7 +1,7 @@
 const { getAnswerFromAPI } = require("../controllers/recControllers");
 
 const getAnswerHandler = async (req, res) => {
-//  const { pregunta } = "¿Cómo puedo enviar preguntas desde mi aplicación?";
+//const { pregunta } = "¿Cómo puedo enviar preguntas desde mi aplicación?";
   try {
     const recomendation = await getAnswerFromAPI();
     console.log("recomendation =", recomendation)
@@ -12,4 +12,6 @@ const getAnswerHandler = async (req, res) => {
   }
 }
 
-module.exports = { getAnswerHandler }
+module.exports = { 
+  getAnswerHandler
+}
