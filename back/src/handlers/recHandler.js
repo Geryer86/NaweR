@@ -1,17 +1,28 @@
-const { getAnswerFromAPI } = require("../controllers/recControllers");
+const { OPENIA_KEY } = process.env
 
-const getAnswerHandler = async (req, res) => {
-//const { pregunta } = "¿Cómo puedo enviar preguntas desde mi aplicación?";
-  try {
-    const recomendation = await getAnswerFromAPI();
-    console.log("recomendation =", recomendation)
-    res.status(200).json(recomendation)
-  } catch (error) {
-    res.status(400).json({error:error.message});
-    console.log("error en el handler", error)
-  }
+const getAnswerFromAPI = async (req, res) => {
+  const { name, area, ubication, class_, slope, rainfall, rainfallb, weeding, compactation, erosion } = req.body;
+  const prompt = `dónde queda ${ubication}`
+  const api = await fetch('https://api.openai.com/v1/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${OPENIA_KEY}`
+    },
+    body: JSON.stringify({
+      model: 'gpt-3.5-turbo',
+      prompt: prompt
+    })
+  })
+
+  console.log(prompt)
+  const resp = api.statusText
+  console.log(api)
+  res.status(200).json(resp)
+
 }
 
-module.exports = { 
-  getAnswerHandler
+
+module.exports = {
+  getAnswerFromAPI
 }

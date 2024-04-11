@@ -8,23 +8,23 @@
       </p>
       <p>
         Ubicación
-        <input type="text" [(ngModel)]="farm.ubication" name="ubication" required/>
+        <input type="text" [(ngModel)]="farm.ubication" name="ubication" id="ubication" required/>
       </p>
       <p>
         Superficie
-        <input type="number" [(ngModel)]="farm.area" name="area" required/>
+        <input type="number" [(ngModel)]="farm.area" name="area" id="area" required/>
       </p>
       <h2>Estado del campo</h2>
       <p>Enmalezamiento (%)</p>
-      <select [(ngModel)]="farm.weeding" name="weeding" required>
+      <select [(ngModel)]="farm.weeding" name="weeding" id="weeding" required>
         <option *ngFor="let weeds of weeding" [value]="weeds">{{weeds}}</option>
       </select>
       <p>Compactación</p>
-      <select [(ngModel)]="farm.compactation" name="compactation" required>
+      <select [(ngModel)]="farm.compactation" name="compactation" id="compactation" required>
         <option *ngFor="let lvl of lvls" [value]="lvl">{{lvl}}</option>
       </select>
       <p>Erosión</p>
-      <select [(ngModel)]="farm.erosion" name="erosion" required>
+      <select [(ngModel)]="farm.erosion" name="erosion" id="erosion" required>
         <option *ngFor="let lvl of lvls" [value]="lvl">{{lvl}}</option>
       </select>
     </form>
@@ -33,17 +33,17 @@
     <form (ngSubmit)="onSubmit()" #farmForm="ngForm">
       <h2>Aptitud agrícola</h2>
       <p>Clase (I-VIII)</p>
-      <select [(ngModel)]="farm.class_" name="class_" required>
+      <select [(ngModel)]="farm.class_" name="class_" id="class_" required>
         <option *ngFor="let class_ of classes" [value]="class_">{{class_}}</option>
       </select>
       <p>Pendiente (%)</p>
-      <select [(ngModel)]="farm.slope" name="slope" required>
+      <select [(ngModel)]="farm.slope" name="slope" id="slope" required>
         <option *ngFor="let slp of slope" [value]="slp">{{slp}}</option>
       </select>
       <p>Precipitaciones (última campaña)</p>
-      <input type="number" placeholder="milímetros" [(ngModel)]="farm.rainfall" name="rainfall" required/>
+      <input type="number" placeholder="milímetros" [(ngModel)]="farm.rainfall" name="rainfall" id="rainfall" required/>
       <p>Precipitaciones esperadas</p>
-      <input type="number" placeholder="milímetros" [(ngModel)]="farm.rainfallb" name="rainfallb" required/>
+      <input type="number" placeholder="milímetros" [(ngModel)]="farm.rainfallb" name="rainfallb" id="rainfallb" required/>
     </form>
     </div>
   <div class="rtt">
@@ -97,8 +97,12 @@
     </div>
   </div>
   <div class="btt">
-    <!-- <button class="button button-blue" type="submit" (click)="onSubmit()" [disabled]="!farmForm.form.valid">Cargar establecimiento</button>
-    <button class="button button-blue" routerLink="/farms">Ver establecimientos</button> -->
-    <button class="button button-blue" routerLink="/recom">Crear recomendación</button>
+    <!-- <button class="button button-blue" type="submit" (click)="onSubmit()" [disabled]="!farmForm.form.valid">Cargar establecimiento</button> -->
+    <!-- <button class="button button-blue" routerLink="/farms">Ver establecimientos</button> -->
+    <button class="button button-blue" type="submit" (click)="onSubmit()">Crear recomendación</button>
+    <!-- <button class="button button-blue" routerLink="/recom">Crear recomendación</button> -->
+    <p>Recomendación</p>
+    <p class="rec">{{ rec }}</p>
   </div>
 </div>
+

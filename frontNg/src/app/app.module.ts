@@ -9,8 +9,6 @@ import { MapComponent } from './components/map/map.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RecomendationComponent } from './pages/recomendation/recomendation.component';
-import { UsersComponent } from './components/users/users.component';
-import { FarmsComponent } from './components/farms/farms.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CreateFarmComponent } from './components/create-farm/create-farm.component';
 
@@ -22,8 +20,6 @@ import { CreateFarmComponent } from './components/create-farm/create-farm.compon
     LandingComponent,
     HomeComponent,
     RecomendationComponent,
-    UsersComponent,
-    FarmsComponent,
     HeaderComponent,
     CreateFarmComponent
   ],

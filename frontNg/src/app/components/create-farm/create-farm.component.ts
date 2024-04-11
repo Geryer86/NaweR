@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FarmsService } from 'src/app/services/farms.service';
+import { RecService } from 'src/app/services/rec.service';
 
 @Component({
   selector: 'app-create-farm',
@@ -21,7 +21,7 @@ export class CreateFarmComponent {
     erosion: ""
   }
 
-  constructor(private http: FarmsService) { }
+  constructor(private http: RecService) { }
   
   crops = [
     'Cultivo',
@@ -71,9 +71,15 @@ export class CreateFarmComponent {
     "Alta"
   ]
 
+  rec: string = ""
+  
+
   onSubmit(): void {
-    this.http.CreateFarms(this.farm).subscribe(() => {
-      window.location.reload();
+    this.http.CreateRec(this.farm).subscribe((data) => {
+      console.log(data)
+      this.rec = data
+      // window.location.reload();
     })
-  } 
+  }
+  
 }

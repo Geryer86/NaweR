@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 
-export class FarmsService {
+export class RecService {
 
   constructor(private http:HttpClient) { }
 
@@ -21,13 +21,12 @@ export class FarmsService {
     })
   }
 
-  GetFarms(): Observable<any> {
-    return this.http.get(`${environment.hostname}/farms`)
+  CreateRec(e: any): Observable<any> {
+    return this.http.post(`${environment.hostname}/rec`, e, this.HttpUploadOptions);
   }
 
-  CreateFarms(e: any): Observable<any> {
-    return this.http.post(
-      `${environment.hostname}/farms`, e, this.HttpUploadOptions);
+  GetRec(): Observable<any> {
+    return this.http.get(`${environment.hostname}/rec`)
   }
 
 }

@@ -1,8 +1,7 @@
 const { Router } = require("express");
-const { getAnswerHandler } = require("../handlers/recHandler");
-
+const { getAnswerFromAPI } = require("../handlers/recHandler");
 const recRouter = Router();
 
-recRouter.get("/", getAnswerHandler);
+recRouter.post("/", getAnswerFromAPI);
 
 module.exports = recRouter;
