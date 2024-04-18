@@ -1,5 +1,6 @@
 body {
   background-image: url(/assets/campo.webp);
   font-family: 'Lucida Sans Unicode', sans-serif;
+  margin: 0;
+  padding: 0;
 }
-
