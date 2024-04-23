@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
-
 header {
   background-color: #000000;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* position: fixed; */
 }
 
 .msg {
@@ -25,24 +25,9 @@ header {
   margin-left: 10%;
 }
 
-.button {
-  display: inline-block;
-  margin-right: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-}
-
-.button-blue {
-  background-color: #0600ae; 
-  color: #ffffff; 
-}
-
-.button-blue:hover {
-  background-color: #000266;
+@media screen and (max-width: 767px) {
+  .msg {
+    padding-right: 38%;
+    font-size: small;
+  }
 }

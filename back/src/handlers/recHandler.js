@@ -1,7 +1,7 @@
 const { OPENIA_KEY } = process.env
 
 const getAnswerFromAPI = async (req, res) => {
-  const { name, area, ubication, class_, slope, rainfall, rainfallb, weeding, compactation, erosion } = req.body;
+  const { area, ubication, class_, slope, rainfall, rainfallb, weeding, compactation, erosion } = req.body;
   const prompt = `dónde queda ${ubication}`
   const api = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
