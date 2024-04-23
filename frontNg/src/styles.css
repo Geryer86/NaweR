@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
 body {
   background-image: url(/assets/campo.webp);
-  font-family: 'Lucida Sans Unicode', sans-serif;
+  font-family: 'Poppins';
+  color: rgb(7, 5, 94);
   margin: 0;
-  padding: 0;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
 }

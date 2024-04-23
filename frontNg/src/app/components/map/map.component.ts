@@ -20,6 +20,10 @@ export class MapComponent {
     streetViewControl: false,
     fullscreenControl: false,
   }
+  centerPos = {
+    lat: 20,
+    lng: -30
+  }
   bsAs = {
     lat: -34.6118,
     lng: -58.4173,
@@ -28,6 +32,10 @@ export class MapComponent {
     lat: -32.62014554060702,
     lng: -60.149028935272156
   }
-  position = this.bsAs
-  zoom = 6
+  nordIt = {
+    lat: 45,
+    lng: 10
+  }
+  position = this.nordIt
+  zoom = 4
 }

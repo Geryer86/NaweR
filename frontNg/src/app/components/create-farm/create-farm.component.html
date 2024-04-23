@@ -1,19 +1,21 @@
 <div class="create">
+  <div class="farm">
+    <h2>Establecimiento</h2>
+    <p>
+      Nombre
+      <input type="text" [(ngModel)]="farm.name" name="name" required/>
+    </p>
+    <p>
+      Ubicación
+      <input type="text" [(ngModel)]="farm.ubication" name="ubication" id="ubication" required/>
+    </p>
+    <p>
+      Superficie
+      <input type="number" [(ngModel)]="farm.area" name="area" id="area" required/>
+    </p>
+  </div>
   <div class="fldstt">
     <form (ngSubmit)="onSubmit()" #farmForm="ngForm">
-      <h2>Establecimiento</h2>
-      <p>
-        Nombre
-        <input type="text" [(ngModel)]="farm.name" name="name" required/>
-      </p>
-      <p>
-        Ubicación
-        <input type="text" [(ngModel)]="farm.ubication" name="ubication" id="ubication" required/>
-      </p>
-      <p>
-        Superficie
-        <input type="number" [(ngModel)]="farm.area" name="area" id="area" required/>
-      </p>
       <h2>Estado del campo</h2>
       <p>Enmalezamiento (%)</p>
       <select [(ngModel)]="farm.weeding" name="weeding" id="weeding" required>
@@ -28,7 +30,7 @@
         <option *ngFor="let lvl of lvls" [value]="lvl">{{lvl}}</option>
       </select>
     </form>
-    </div>
+  </div>
   <div class="aptagr">
     <form (ngSubmit)="onSubmit()" #farmForm="ngForm">
       <h2>Aptitud agrícola</h2>
@@ -45,49 +47,39 @@
       <p>Precipitaciones esperadas</p>
       <input type="number" placeholder="milímetros" [(ngModel)]="farm.rainfallb" name="rainfallb" id="rainfallb" required/>
     </form>
-    </div>
+  </div>
   <div class="rtt">
     <h2>Rotación</h2>
-    <h4>Desde el último año</h4>
     <div class="crops">
       <label>1</label>
-      <br>
       <select>
         <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
       </select>
       <select>
         <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
       </select>
-      <br>
       <label>2</label>
-      <br>
       <select>
         <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
       </select>
       <select>
         <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
       </select>
-      <br>
       <label>3</label>
-      <br>
       <select>
         <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
       </select>
       <select>
         <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
       </select>
-      <br>
       <label>4</label>
-      <br>
       <select>
         <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
       </select>
       <select>
         <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
       </select>
-      <br>
       <label>5</label>
-      <br>
       <select>
         <option *ngFor="let crop of crops" [value]="crop">{{crop}}</option>
       </select>
@@ -96,13 +88,12 @@
       </select> 
     </div>
   </div>
-  <div class="btt">
+</div>
+  <div class="rec">
     <!-- <button class="button button-blue" type="submit" (click)="onSubmit()" [disabled]="!farmForm.form.valid">Cargar establecimiento</button> -->
     <!-- <button class="button button-blue" routerLink="/farms">Ver establecimientos</button> -->
     <button class="button button-blue" type="submit" (click)="onSubmit()">Crear recomendación</button>
     <!-- <button class="button button-blue" routerLink="/recom">Crear recomendación</button> -->
-    <p>Recomendación</p>
-    <p class="rec">{{ rec }}</p>
+    <p class="rec-ans">{{ rec }}</p>
   </div>
-</div>
 
