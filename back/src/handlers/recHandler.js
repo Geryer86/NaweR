@@ -15,7 +15,7 @@ const getAnswerFromAPI = async (req, res) => {
     body: JSON.stringify({
       model: 'gpt-3.5-turbo-instruct',
       prompt: prompt,
-      max_tokens: 200,
+      max_tokens: 400,
       //temperature: 0.9
     })
   })
